@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Item genre list</title>
+</head>
+<body>
+<h1>This is the list of item genre.</h1>
+
+    <div th:each = "genre: ${genre.getChildren()}">
+        <p th:text="${genre.getChild().getGenreName()}"></p>
+    </div>
+
+    </div>
+</body>
+</html>

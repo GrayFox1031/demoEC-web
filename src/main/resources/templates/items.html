@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Item list</title>
+</head>
+<body>
+
+<h1>This is the list of items.</h1>
+
+    <div th:each = "items: ${items}">
+        <p th:text="${items.getItemName()}"></p>
+    </div>
+
+</body>
+</html>
