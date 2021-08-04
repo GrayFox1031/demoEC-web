@@ -23,10 +23,11 @@ public class ItemsController {
     @GetMapping(value = "/items", produces = "application/json")
     public String getItems(Model model)  throws IOException {
 
-//        model.addAttribute("items", itemsLogic.getItemList());
+        model.addAttribute("items", itemsLogic.getItemList());
 
         System.out.println("Test3：" + itemsLogic.getItemList());
 //        System.out.println(itemsLogic.getItemList().getItems().get(3).getItemName());
+//        System.out.println("Test4：" + itemsLogic.getItemList().getItems().getItem().get(3).getItemName());
 
         return "items";
     }

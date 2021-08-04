@@ -12,7 +12,7 @@ import java.util.Map;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class ItemDto {
 
-    private List<String> mediumImageUrls = null;
+    private List<ImageUrlDto> mediumImageUrls = null;
     private Integer pointRate;
     private Integer shopOfTheYearFlag;
     private Integer affiliateRate;
@@ -24,7 +24,7 @@ public class ItemDto {
     private String itemCaption;
     private String catchcopy;
     private List<Integer> tagIds = null;
-    private List<String> smallImageUrls = null;
+    private List<ImageUrlDto> smallImageUrls = null;
     private String asurakuClosingTime;
     private Integer imageFlag;
     private Integer availability;
