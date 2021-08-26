@@ -26,8 +26,6 @@ public class ItemsController {
         model.addAttribute("items", itemsLogic.getItemList());
 
         System.out.println("Test3：" + itemsLogic.getItemList());
-//        System.out.println(itemsLogic.getItemList().getItems().get(3).getItemName());
-//        System.out.println("Test4：" + itemsLogic.getItemList().getItems().getItem().get(3).getItemName());
 
         return "items";
     }
