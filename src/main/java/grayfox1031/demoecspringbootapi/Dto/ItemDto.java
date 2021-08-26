@@ -2,6 +2,7 @@ package grayfox1031.demoecspringbootapi.Dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.HashMap;
@@ -9,11 +10,14 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@JsonIgnoreProperties(ignoreUnknown=true)
+//@JsonIgnoreProperties(ignoreUnknown=true)
 public class ItemDto {
+//    @JsonProperty("Item")
+//    private Item item;
 
-    private List<ImageUrlDto> mediumImageUrls = null;
-    private Integer pointRate;
+    private List<ImageUrlDto> mediumImageUrls;
+    @JsonProperty("pointRate")
+    private Integer pointRate=1;
     private Integer shopOfTheYearFlag;
     private Integer affiliateRate;
     private Integer shipOverseasFlag;
