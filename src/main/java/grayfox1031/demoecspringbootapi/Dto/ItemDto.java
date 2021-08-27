@@ -12,12 +12,10 @@ import java.util.Map;
 @Data
 //@JsonIgnoreProperties(ignoreUnknown=true)
 public class ItemDto {
-//    @JsonProperty("Item")
-//    private Item item;
 
     private List<ImageUrlDto> mediumImageUrls;
     @JsonProperty("pointRate")
-    private Integer pointRate=1;
+    private Integer pointRate;
     private Integer shopOfTheYearFlag;
     private Integer affiliateRate;
     private Integer shipOverseasFlag;

@@ -8,6 +8,7 @@ import java.util.List;
 
 @Data
 public class ParentItemDto {
+
     @JsonProperty("Items")
     private List<ItemsDto> items;
     private Integer pageCount;

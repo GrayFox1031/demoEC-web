@@ -16,15 +16,6 @@ public class ItemsDto {
 
     @JsonProperty("Item")
     private ItemDto item;
-//    private Integer pageCount;
-//    private List<String> TagInformation;
-//    private Integer hits;
-//    private Integer last;
-//    private Integer count;
-//    private Integer page;
-//    private Integer carrier;
-//    private List<String> GenreInformation;
-//    private Integer first;
 
 //    @JsonIgnore
     @JsonIgnoreProperties(ignoreUnknown=true)
