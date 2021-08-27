@@ -8,9 +8,13 @@
 
 <h1>This is the list of items.</h1>
 
-    <div th:each = "items: ${items}">
-        <p th:text="${items}"></p>
+    <div th:each = "items: ${items.getItems()}">
+        <p th:text="${items.getItem().getItemName()}"></p>
     </div>
+
+    <hr>
+
+    <p th:text="${items}"></p>
 
 </body>
 </html>

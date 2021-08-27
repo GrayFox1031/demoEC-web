@@ -13,7 +13,6 @@ import java.io.IOException;
 //@RequiredArgsConstructor
 public class ItemsLogic {
 
-//    private final RestTemplate restTemplate;
     @Autowired
     RestTemplate restTemplate = new RestTemplate();
 
@@ -21,11 +20,7 @@ public class ItemsLogic {
     public ParentItemDto getItemList() throws IOException {
 
         String response = restTemplate.getForObject(URL, String.class);
-
-        System.out.println("Test2:" + response);
-
         ObjectMapper mapper = new ObjectMapper();
-
         ParentItemDto items = mapper.readValue(response, ParentItemDto.class);
 
         return items;
