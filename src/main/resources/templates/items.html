@@ -9,12 +9,22 @@
 <h1>This is the list of items.</h1>
 
     <div th:each = "items: ${items.getItems()}">
+        <img th:src="@{${items.getItem().getMediumImageUrls().get(0).getImageUrl()}}" style="width: auto;">
+        <img th:src="@{${items.getItem().getMediumImageUrls().get(1).getImageUrl()}}" style="width: auto;">
+        <img th:src="@{${items.getItem().getMediumImageUrls().get(2).getImageUrl()}}" style="width: auto;">
         <p th:text="${items.getItem().getItemName()}"></p>
+        <p th:text="${items.getItem().getItemPrice()}"></p>
+        <p th:text="${items.getItem().getCatchcopy()}"></p>
+        <p th:text="${items.getItem().getItemCaption()}"></p>
+        <p th:text="${items.getItem().getAvailability()}"></p>
+        <p th:text="${items.getItem().getReviewAverage()}"></p>
+        <p th:text="${items.getItem().getShopName()}"></p>
+        <p th:text="${items.getItem().getItemUrl()}"></p>
+        <hr>
     </div>
 
-    <hr>
-
-    <p th:text="${items}"></p>
+<!--    <hr>-->
+<!--    <p th:text="${items}"></p>-->
 
 </body>
 </html>
