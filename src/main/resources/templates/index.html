@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is the DEMO EC-Site provided by GrayFox.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../style.css">
+
+
 </head>
 <body>
 <!--<header th:include="fragment/demoheader :: demoheader"></header>-->
-<main>
-  <h1>Hello, Enjoy your shopping!!</h1>
 
-</main>
+<header>
+    <a href="#" class="logo"><span>E</span>C DEMO-site</a>
+
+    <nav class="navbar">
+        <a href="#top">Top</a>
+        <a href="#items">items</a>
+        <a href="#contact">Contact</a>
+        <a href="#feedback">Feedback</a>
+    </nav>
+
+    <div class="icon">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for=""></label>
+    </form>
+</header>
+
 </body>
 </html>

@@ -9,17 +9,22 @@
 <h1>This is the list of items.</h1>
 
     <div th:each = "items: ${items.getItems()}">
-        <img th:src="@{${items.getItem().getMediumImageUrls().get(0).getImageUrl()}}" style="width: auto;">
-        <img th:src="@{${items.getItem().getMediumImageUrls().get(1).getImageUrl()}}" style="width: auto;">
-        <img th:src="@{${items.getItem().getMediumImageUrls().get(2).getImageUrl()}}" style="width: auto;">
         <p th:text="${items.getItem().getItemName()}"></p>
-        <p th:text="${items.getItem().getItemPrice()}"></p>
-        <p th:text="${items.getItem().getCatchcopy()}"></p>
-        <p th:text="${items.getItem().getItemCaption()}"></p>
-        <p th:text="${items.getItem().getAvailability()}"></p>
-        <p th:text="${items.getItem().getReviewAverage()}"></p>
-        <p th:text="${items.getItem().getShopName()}"></p>
-        <p th:text="${items.getItem().getItemUrl()}"></p>
+        <img th:src="@{${items.getItem().getMediumImageUrls().get(0).getImageUrl()}}" style="width: auto;">
+<!--        <img th:src="@{${items.getItem().getMediumImageUrls().get(1).getImageUrl()}}" style="width: auto;">-->
+<!--        <img th:src="@{${items.getItem().getMediumImageUrls().get(2).getImageUrl()}}" style="width: auto;">-->
+<!--        <img th:src="@{${items.getItem().getSmallImageUrls().get(0).getImageUrl()}}" style="width: auto;">-->
+        <img th:src="@{${items.getItem().getSmallImageUrls().get(1).getImageUrl()}}" style="width: auto;">
+        <img th:src="@{${items.getItem().getSmallImageUrls().get(2).getImageUrl()}}" style="width: auto;">
+        <br>
+        価格：¥<span th:text="${items.getItem().getItemPrice()}"></span>-<br>
+        <span th:text="${items.getItem().getCatchcopy()}"></span><br>
+        <span th:text="${items.getItem().getItemCaption()}"></span><br>
+        在庫：<span th:text="${items.getItem().getAvailability()}"></span><br>
+        評価：<span th:text="${items.getItem().getReviewAverage()}"></span><br>
+        出品者：<span th:text="${items.getItem().getShopName()}"></span><br>
+        商品URL：<span th:text="${items.getItem().getItemUrl()}"></span><br>
+<!--        商品URL：<a th:href="${items.getItem().getItemUrl()}"></a>-->
         <hr>
     </div>
 
