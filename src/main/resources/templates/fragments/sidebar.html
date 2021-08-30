@@ -1,0 +1,7 @@
+<div th:fragment="sidebar">
+    <div th:each = "genre: ${genre.getChildren()}">
+        <ul>
+            <li th:text="${genre.getChild().getGenreName()}"></li>
+        </ul>
+    </div>
+</div>
