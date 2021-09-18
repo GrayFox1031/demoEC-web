@@ -25,7 +25,7 @@ public class ItemsController {
 
         model.addAttribute("items", itemsLogic.getItemList());
 
-        System.out.println("Test1：" + itemsLogic.getItemList());
+        System.out.println("Test.image：" + itemsLogic.getItemList().getItems().get(1).getItem().getMediumImageUrls().get(0).getImageUrl());
 
         return "items";
     }

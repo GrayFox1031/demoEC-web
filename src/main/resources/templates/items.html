@@ -12,10 +12,10 @@
         <p th:text="${items.getItem().getItemName()}"></p>
         <img th:src="@{${items.getItem().getMediumImageUrls().get(0).getImageUrl()}}" style="width: auto;">
 <!--        <img th:src="@{${items.getItem().getMediumImageUrls().get(1).getImageUrl()}}" style="width: auto;">-->
-<!--        <img th:src="@{${items.getItem().getMediumImageUrls().get(2).getImageUrl()}}" style="width: auto;">-->
+<!--Trouble        <img th:src="@{${items.getItem().getMediumImageUrls().get(2).getImageUrl()}}" style="width: auto;">-->
 <!--        <img th:src="@{${items.getItem().getSmallImageUrls().get(0).getImageUrl()}}" style="width: auto;">-->
         <img th:src="@{${items.getItem().getSmallImageUrls().get(1).getImageUrl()}}" style="width: auto;">
-        <img th:src="@{${items.getItem().getSmallImageUrls().get(2).getImageUrl()}}" style="width: auto;">
+<!--        <img th:src="@{${items.getItem().getSmallImageUrls().get(2).getImageUrl()}}" style="width: auto;">-->
         <br>
         価格：¥<span th:text="${items.getItem().getItemPrice()}"></span>-<br>
         <span th:text="${items.getItem().getCatchcopy()}"></span><br>

@@ -10,7 +10,7 @@ import java.util.Map;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class ImageUrlDto {
 
-    private String imageUrl;
+    private String imageUrl = "";
 
     @JsonIgnoreProperties(ignoreUnknown=true)
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
