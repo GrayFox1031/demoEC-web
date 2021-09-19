@@ -2,15 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Item genre list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item genre list test</title>
 </head>
 <body>
-<h1>This is the list of item genre.</h1>
+
+    <h1>Test of item genre</h1>
 
     <div th:each = "genre: ${genre.getChildren()}">
         <p th:text="${genre.getChild().getGenreName()}"></p>
     </div>
 
-    </div>
 </body>
 </html>

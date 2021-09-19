@@ -2,34 +2,46 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
     <title>Item list</title>
 </head>
+
 <body>
 
-<h1>This is the list of items.</h1>
+    <header th:include="fragments/header :: header"></header>
 
-    <div th:each = "items: ${items.getItems()}">
-        <p th:text="${items.getItem().getItemName()}"></p>
-        <img th:src="@{${items.getItem().getMediumImageUrls().get(0).getImageUrl()}}" style="width: auto;">
-<!--        <img th:src="@{${items.getItem().getMediumImageUrls().get(1).getImageUrl()}}" style="width: auto;">-->
-<!--Trouble        <img th:src="@{${items.getItem().getMediumImageUrls().get(2).getImageUrl()}}" style="width: auto;">-->
-<!--        <img th:src="@{${items.getItem().getSmallImageUrls().get(0).getImageUrl()}}" style="width: auto;">-->
-        <img th:src="@{${items.getItem().getSmallImageUrls().get(1).getImageUrl()}}" style="width: auto;">
-<!--        <img th:src="@{${items.getItem().getSmallImageUrls().get(2).getImageUrl()}}" style="width: auto;">-->
-        <br>
-        価格：¥<span th:text="${items.getItem().getItemPrice()}"></span>-<br>
-        <span th:text="${items.getItem().getCatchcopy()}"></span><br>
-        <span th:text="${items.getItem().getItemCaption()}"></span><br>
-        在庫：<span th:text="${items.getItem().getAvailability()}"></span><br>
-        評価：<span th:text="${items.getItem().getReviewAverage()}"></span><br>
-        出品者：<span th:text="${items.getItem().getShopName()}"></span><br>
-        商品URL：<span th:text="${items.getItem().getItemUrl()}"></span><br>
-<!--        商品URL：<a th:href="${items.getItem().getItemUrl()}"></a>-->
-        <hr>
+    <div class="main-contents">
+
+        <div class="sidebar" th:include="fragments/sidebar :: sidebar"></div>
+
+        <main class="main">
+            <h1>Items</h1>
+            <div th:each = "items: ${items.getItems()}">
+                <p th:text="${items.getItem().getItemName()}"></p>
+
+                <div th:each = "mediumImageUrls: ${items.getItem().getMediumImageUrls()}" >
+                    <img th:src="@{${mediumImageUrls.getImageUrl()}}" style="width: auto;">
+                </div>
+
+                <div th:each = "smallImageUrls: ${items.getItem().getSmallImageUrls()}" >
+                    <img th:src="@{${smallImageUrls.getImageUrl()}}" style="width: auto;">
+                </div>
+
+                <br>
+                価格：¥<span th:text="${items.getItem().getItemPrice()}"></span>-<br>
+                <span th:text="${items.getItem().getCatchcopy()}"></span><br>
+                <span th:text="${items.getItem().getItemCaption()}"></span><br>
+                在庫：<span th:text="${items.getItem().getAvailability()}"></span><br>
+                評価：<span th:text="${items.getItem().getReviewAverage()}"></span><br>
+                出品者：<span th:text="${items.getItem().getShopName()}"></span><br>
+                商品URL：<span th:text="${items.getItem().getItemUrl()}"></span><br>
+                <hr>
+            </div>
+        </main>
     </div>
 
-<!--    <hr>-->
-<!--    <p th:text="${items}"></p>-->
+    <footer th:include="fragments/footer :: footer"></footer>
 
 </body>
 </html>

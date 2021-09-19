@@ -1,7 +1,6 @@
 package grayfox1031.demoecspringbootapi.controller;
 
 import grayfox1031.demoecspringbootapi.logic.GenreLogic;
-import grayfox1031.demoecspringbootapi.logic.ItemsLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
