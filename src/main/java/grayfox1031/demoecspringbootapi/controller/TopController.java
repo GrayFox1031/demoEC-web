@@ -17,7 +17,7 @@ public class TopController {
     GenreLogic genreLogic;
 
     @GetMapping(value = "", produces = "application/json")
-    public String top(Model model) throws IOException {
+    public String getTop(Model model) throws IOException {
 
         model.addAttribute("genre", genreLogic.getGenre());
 

@@ -11,6 +11,7 @@ public class ParentItemDto {
 
     @JsonProperty("Items")
     private List<ItemsDto> items;
+    @JsonProperty("pageCount")
     private Integer pageCount;
     @JsonProperty("TagInformation")
     private List<String> tagInformation;

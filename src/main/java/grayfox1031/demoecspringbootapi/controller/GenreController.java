@@ -17,7 +17,7 @@ public class GenreController {
         GenreLogic genreLogic;
 
         @GetMapping(value = "/genre", produces = "application/json")
-        public String genre(Model model) throws IOException {
+        public String getGenre(Model model) throws IOException {
 
             model.addAttribute("genre", genreLogic.getGenre());
 
