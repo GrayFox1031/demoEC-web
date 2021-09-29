@@ -20,18 +20,15 @@
             <div th:each = "items: ${items.getItems()}" class="items">
                 <p th:text="${items.getItem().getItemName()}"></p>
 
-                <div th:each = "mediumImageUrls: ${items.getItem().getMediumImageUrls()}" class="middle-images">
-                    <img th:src="@{${mediumImageUrls.getImageUrl()}}" style="width: auto;">
-                </div>
-
-<!--                <div th:each = "smallImageUrls: ${items.getItem().getSmallImageUrls()}" >-->
-<!--                    <img th:src="@{${smallImageUrls.getImageUrl()}}" style="width: auto;">-->
+<!--                <div th:each = "mediumImageUrls: ${items.getItem().getMediumImageUrls()}" class="middle-images">-->
+<!--                    <img th:src="@{${mediumImageUrls.getImageUrl()}}" style="width: auto;">-->
 <!--                </div>-->
+                <img th:src="@{${items.getItem().getMediumImageUrls().get(0).getImageUrl()}}" style="width: auto;">
+
 
                 <br>
                 価格：¥<span th:text="${items.getItem().getItemPrice()}"></span>-<br>
                 <span th:text="${items.getItem().getCatchcopy()}"></span><br>
-                <span th:text="${items.getItem().getItemCaption()}"></span><br>
                 在庫：<span th:text="${items.getItem().getAvailability()}"></span><br>
                 評価：<span th:text="${items.getItem().getReviewAverage()}"></span><br>
                 出品者：<span th:text="${items.getItem().getShopName()}"></span><br>
